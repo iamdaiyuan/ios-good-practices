@@ -1,10 +1,11 @@
 iOS最佳实践
 ==================
 
-这个文档是翻译的这篇文章(https://github.com/futurice/ios-good-practices)。对翻译的要求不高，只要能正确传递作者的愿意就好，不要求精确翻译，有些不重要的语句就直接跳过了，有些则根据我自己的理解来写。
+这个文档是翻译的这篇[文章](https://github.com/futurice/ios-good-practices)。对翻译的要求不高，只要能正确传递作者的愿意就好，不要求精确翻译，有些不重要的语句就直接跳过了，有些则根据我自己的理解来写。
 
 翻译者名单：
 [iamdaiyuan](https://github.com/iamdaiyuan)
+
 转载请注明出处！
 
 ## 为什么会有这篇文章？
