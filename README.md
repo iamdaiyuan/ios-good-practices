@@ -1,41 +1,38 @@
-iOS Good Practices
+iOS最佳实践
 ==================
 
-_Just like software, this document will rot unless we take care of it. We encourage everyone to help us on that – just open an issue or send a pull request!_
+这个文档是我（https://github.com/iamdaiyuan）翻译的这篇文章(https://github.com/futurice/ios-good-practices)。我翻译的这篇文章，对自己要求不高，只要能正确传递作者的愿意就好，不要求精确翻译，有些不重要的语句就直接跳过了，有些则根据我自己的理解来写。
 
-Interested in other mobile platforms? Our [Best Practices in Android Development][android-best-practices] and [Windows App Development Best Practices][windows-app-development-best-practices] documents have got you covered.
+转载请注明出处！
 
-[android-best-practices]: https://github.com/futurice/android-best-practices
-[windows-app-development-best-practices]: https://github.com/futurice/windows-app-development-best-practices
+## 为什么会有这篇文章？
 
-## Why?
+不要重复发明轮子。这句经典的话大家都耳熟能详了。没错，既然做一件事情必定有一个最佳实践，那何必让大家在“黑暗”中不停摸索呢？为什么不直接指出来，告诉他们，你应该这样做，因为这是最佳实践！是被大多数人证明了的，而且现在还在使用的方法。
 
-Getting on board with iOS can be intimidating. Neither Swift nor Objective-C are widely used elsewhere, the platform has its own names for almost everything, and it's a bumpy road for your code to actually make it onto a physical device. This living document is here to help you, whether you're taking your first steps in Cocoaland or you're curious about doing things "the right way". Everything below is just suggestions, so if you have a good reason to do something differently, by all means go for it!
+我希望越来越多的人能加入进来，不断改进我们的最佳实践！
 
-## Contents
+## 内容列表
 
-If you are looking for something specific, you can jump right into the relevant section from here.
-
-1. [Getting Started](#getting-started)
-1. [Common Libraries](#common-libraries)
-1. [Architecture](#architecture)
-1. [Networking](#networking)
-1. [Assets](#assets)
-1. [Coding Style](#coding-style)
+1. [起步](#getting-started)
+1. [常用第三方库](#common-libraries)
+1. [目录结构](#architecture)
+1. [网络访问](#networking)
+1. [资源](#assets)
+1. [代码规范](#coding-style)
 1. [Diagnostics](#diagnostics)
 1. [Analytics](#analytics)
-1. [Building](#building)
-1. [Deployment](#deployment)
-1. [In-App Purchases (IAP)](#in-app-purchases-iap)
+1. [构建](#building)
+1. [部署](#deployment)
+1. [IAP](#in-app-purchases-iap)
 1. [License](#license)
 
 ## Getting Started
 
 ### Xcode
 
-[Xcode][xcode] is the IDE of choice for most iOS developers, and the only one officially supported by Apple. There are some alternatives, of which [AppCode][appcode] is arguably the most famous, but unless you're already a seasoned iOS person, go with Xcode. Despite its shortcomings, it's actually quite usable nowadays!
+[Xcode][xcode] 是开发iOS的必选工具，除了Xcode，不建议在浪费时间挑选其他开发工具了。
 
-To install, simply download [Xcode on the Mac App Store][xcode-app-store]. It comes with the newest SDK and simulators, and you can install more stuff under _Preferences > Downloads_.
+到这里[Xcode on the Mac App Store][xcode-app-store]下载Xcode，安装即可。
 
 [xcode]: https://developer.apple.com/xcode/
 [appcode]: https://www.jetbrains.com/objc/
