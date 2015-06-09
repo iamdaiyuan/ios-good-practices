@@ -41,28 +41,30 @@ iOS最佳实践
 [appcode]: https://www.jetbrains.com/objc/
 [xcode-app-store]: https://itunes.apple.com/us/app/xcode/id497799835
 
-### Project Setup
+### 项目筹划
+在开始一个iOS项目之前，都会提出一个需要回答的问题，”用代码写全部的view，还是用Storyboard或者是XIB写view？“。你应该从下面几个方面去考量：
 
-A common question when beginning an iOS project is whether to write all views in code or use Interface Builder with Storyboards or XIB files. Both are known to occasionally result in working software. However, there are a few considerations:
-
-#### Why code?
-* Storyboards are more prone to version conflicts due to their complex XML structure. This makes merging much harder than with code.
-* It's easier to structure and reuse views in code, thereby keeping your codebase [DRY][dry].
-* All information is in one place. In Interface Builder you have to click through all the inspectors to find what you're looking for.
+#### 用代码的好处
+* 在多人协作过程中，Storyboard由于是用XML编写的，容易产生版本冲突，让代码合并变的困难
+* 用代码编写view，可以很容易的重用view代码
+* 使用代码还有一个好处，就是所有的信息都在一起，不需要你在代码和Storyboard视图中来回切换，查找信息
 
 [dry]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 
-#### Why Storyboards?
-* For the less technically inclined, Storyboards can be a great way to contribute to the project directly, e.g. by tweaking colors or layout constraints. However, this requires a working project setup and some time to learn the basics.
-* Iteration is often faster since you can preview certain changes without building the project.
-* In Xcode 6, custom fonts and UI elements are finally represented visually in Storyboards, giving you a much better idea of the final appearance while designing.
-* Starting with iOS 8, [Size Classes][size-classes] allow you to design for different device types and screens without duplication.
+#### 使用Storyboard的好处
+
+* 用Storyboard的好处就是容易上手，直接拖拽控件到view上，通过设置IBOutlet和IBAction，就可以方便的与代码进行交互了
+* 在Xcode 6中，自定义字体和UI控件可以有好的展现在Storyboards中，给你一个在设计阶段，更好更快地展示想法的途径。
+* 从iOS8开始[Size Classes][size-classes] 允许你为不同设备的不同尺寸的屏幕做设计，而且是一次设计到处运行，不必再为了适配不同的屏幕尺寸，做那些重复的工作。
+* 总之，在编写代码阶段，用Storyboard可以直观的看到UI做成什么样子了，比用代码写View会更直观。
 
 [size-classes]: http://blog.futurice.com/adaptive-view-ios8
 
-### Ignores
+### .gitignore文件
 
-A good first step when putting a project under version control is to have a decent `.gitignore` file. That way, unwanted files (user settings, temporary files, etc.) will never even make it into your repository. Luckily, GitHub has us covered for both [Objective-C][objc-gitignore] and [Swift][swift-gitignore].
+如果你用git作为代码的版本管理工具，那么，你一定会喜欢上".gitignore"这个文件的。你应该让git忽略那些零时文件，编译出的文件等不必要的文件，只需配置.gitignore文件即可达到目的。如果你不知道怎么配置.gitignore，你可以上git官方网站学习一下，不过，很幸运，github为我们提供了iOS和Swift语言的模板。
+
+[Objective-C][objc-gitignore] and [Swift][swift-gitignore].
 
 [objc-gitignore]: https://github.com/github/gitignore/blob/master/Objective-C.gitignore
 [swift-gitignore]: https://github.com/github/gitignore/blob/master/Swift.gitignore
